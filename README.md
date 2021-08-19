@@ -3,3 +3,5 @@
 
 [网页录屏浏览](https://www.bilibili.com/video/BV1Bf4y1R7gD)
 
+
+<img src="https://github.com/langyixuan/Covid19-Web-Design/blob/master/images/cover.png" width="600px">
