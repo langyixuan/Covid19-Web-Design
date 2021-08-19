@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 网站说明 -->
+    <meta name="description" content="Covid-19新型冠状病毒网站" />
+    <!-- 网站关键字 -->
+    <meta name="keywords" content="新型冠状病毒,了解新型冠状病毒,预防新型冠状病毒,心理咨询,新型冠状病毒时讯">
+
+    <link rel="stylesheet" href="css/start.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="shortcut icon" href="images/logo.ico" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="js/circletype.min.js"></script>
+    <title>欢迎进入Covid-19</title>
+</head>
+
+<body>
+    <!-- 滚动条设计 开始 -->
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
+    <!-- 滚动条设计 结束 -->
+
+    <!-- scroll旋转装饰 开始 -->
+    <div class="circular-text">
+        <span id="rotated">
+            Covid - 19 · Coronavirus · Covid - 19 · Coronavirus · Covid - 19 · Coronavirus · Covid - 19 ·
+            Coronavirus ·
+        </span>
+    </div>
+    <!-- scroll旋转装饰 结束 -->
+
+    <!-- 发光按钮设计 开始 -->
+    <div class="btn">
+        <a href="sign_in_up.html">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            ENTER COVID-19
+        </a>
+    </div>
+    <!-- 发光按钮设计 结束 -->
+
+    <!-- 鼠标特效 开始 -->
+    <div class='cursor' id="cursor"></div>
+    <div class='cursor2' id="cursor2"></div>
+    <div class='cursor3' id="cursor3"></div>
+    <!-- 鼠标特效 结束 -->
+
+    <!-- <script type="text/javascript" src="js/common.js"></script> -->
+    <script>
+        // 旋转装饰动效设置 开始
+        const circleType = new CircleType(
+            document.getElementById("rotated")
+        ).radius(80);
+        $(window).scroll(function () {
+            var offset = $(window).scrollTop();
+            offset = offset * 0.4;
+
+            $(".circular-text").css({
+                "-moz-transform": "rotate(" + offset + "deg)",
+                "-webkit-transform": "rotate(" + offset + "deg)",
+                "-o-transform": "rotate(" + offset + "deg)",
+                "-ms-transform": "rotate(" + offset + "deg)",
+                "transform": "rotate(" + offset + "deg)"
+            });
+        });
+        // 旋转装饰动效设置 结束
+
+        // 滚动条设计 开始 
+        let progress = document.getElementById('progressbar');
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function () {
+            let progressHeight = (window.pageYOffset / totalHeight) * 100;
+            progress.style.height = progressHeight + "%";
+        }
+        // 滚动条设计 结束
+
+        // 鼠标样式特效 开始
+        var t = document.getElementById("cursor"),
+            e = document.getElementById("cursor2"),
+            i = document.getElementById("cursor3");
+        document.getElementsByTagName("body")[0].addEventListener("mousemove", function (n) {
+            t.style.left = n.clientX + "px",
+                t.style.top = n.clientY + "px",
+                e.style.left = n.clientX + "px",
+                e.style.top = n.clientY + "px",
+                i.style.left = n.clientX + "px",
+                i.style.top = n.clientY + "px"
+        });
+
+        function n(t) {
+            e.classList.add("hover"), i.classList.add("hover")
+        }
+        function s(t) {
+            e.classList.remove("hover"), i.classList.remove("hover")
+        }
+        s();
+        for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
+            o(r[a])
+        }
+        function o(t) {
+            t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
+        }
+// 鼠标样式特效 结束
+
+    </script>
+
+
+</body>
+
+
+</html>

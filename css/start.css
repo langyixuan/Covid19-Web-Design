@@ -1,0 +1,130 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 4000px; 
+    background: url(../images/start.jpg) no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* 旋转字体效果 开始 */
+.circular-text {
+    position: fixed;
+    top: 23%;
+    left: 50%;
+    color: rgba(255,255,255,0);
+    transform: translate(-50%,-50%);
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: "Monument";
+    transition: .5s ease-out;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+}
+/* 旋转字体效果 结束 */
+
+/* 按钮效果 开始 */
+.btn {
+    position: fixed;
+    top: 52%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: row;
+}
+a {
+    position: relative;
+    display: inline-block;
+    padding: 20px 25px;
+    margin-left: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 900;
+    font-family: sans-serif;
+    color:#03e9f4;
+    overflow: hidden;
+    transition: .8s;
+    letter-spacing: 4px;
+    -webkit-box-reflect: below 2px linear-gradient(transparent,#0008); 
+    /* 设置元素的倒影 */
+}
+a:nth-child(1) {
+    filter: hue-rotate(75deg);
+}
+
+a:hover {
+    background-color: #03e9f4;
+    color: #ffffff;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4, 
+                0 0 50px #03e9f4, 
+                0 0 100px #03e9f4;
+    /* transition-delay: 1.5s; */
+}
+a span {
+    position: absolute;
+    display: block;
+}
+a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1 {
+    0% {left: -100%;}
+    100% {left: 100%;}
+}
+
+a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animate2 {
+    0% {top: -100%;}
+    100% {top: 100%;}
+}
+
+a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate3 {
+    0% {right: -100%;}
+    100% {right: 100%;}
+}
+
+a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 1.5s;
+}
+@keyframes animate4 {
+    0% {bottom: -100%;}
+    100% {bottom: 100%;}
+}
+/* 按钮效果 结束 */
+
+
+
+
+

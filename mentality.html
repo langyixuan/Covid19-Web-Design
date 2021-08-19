@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>COVID-19心理帮扶</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 网站说明 -->
+    <meta name="description" content="Covid-19新型冠状网站" />
+    <!-- 网站关键字 -->
+    <meta name="keywords" content="新型冠状病毒,了解新型冠状病毒,预防新型冠状病毒,心理咨询,新型冠状病毒时讯">
+    <link rel="shortcut icon" href="images/logo.ico" />
+    <link rel="stylesheet" href="css/mentality.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/consult.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- 鼠标及滚动条特效 -->
+    <script src="js/assist.js"></script>
+    <!-- 顶部导航栏特效 -->
+    <script
+        src="https://static.codepen.io/assets/editor/full/full_page_renderer-a8be422e43b5954dbe3f06dc7cd9f3f50f93ea87e1ff05c0680e7718ad800c6a.js"></script>
+    <!-- 线上咨询 -->
+    <script src="http://www.weizoom.com/static/resources/js/jquery-1.7.1.min.js"></script>
+
+</head>
+
+<body onload="getNowTime()">
+    <!--线上咨询界面 开始-->
+    <div class="dialogue-wrapper">
+        <div id="btn_open" class="dialogue-support-btn">
+            <i class="dialogue-support-icon"></i>
+            <i class="dialogue-support-line"></i>
+            <span class="dialogue-support-text">线上咨询</span>
+        </div>
+        <div class="dialogue-main">
+            <div class="dialogue-header">
+                <i id="btn_close" class="dialogue-close">></i>
+                <div class="dialogue-service-info">
+                    <i class="dialogue-service-img"><img src="images/mentality/consult.png" /></i>
+                    <div class="dialogue-service-title">
+                        <p class="dialogue-service-name">COVID-19在线心理咨询</p>
+                        <p class="dialogue-service-detail"></p>
+                        <div id="clock"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="dialogue_contain" class="dialogue-contain">
+                <p class="dialogue-service-contain"><span
+                        class="dialogue-text dialogue-service-text">您好,请问有什么可以帮到您的吗？</span></p>
+            </div>
+            <div class="dialogue-submit">
+                <p id="dialogue_hint" class="dialogue-hint"><span class="dialogue-hint-icon">!</span><span
+                        class="dialogue-hint-text">发送内容不能为空</span></p>
+                <textarea id="dialogue_input" class="dialogue-input-text"
+                    placeholder="请输入您的问题，按Enter键提交（shift+Enter换行）"></textarea>
+                <div class="dialogue-input-tools">
+                    <img src="images/mentality/send.png" />
+                    <!-- <img src="assets/img/contact/wenjian.png" height="30" width="30" /> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--线上咨询界面 结束-->
+
+    <!-- 顶部导航栏 开始 -->
+    <header class="cd-header">
+        <div class="header-wrapper">
+            <div class="logo-wrap">
+                <a href="index.html" class="hover-target">
+                    <img src="images/logo1.png" alt="">
+                    <span>COVID-19</span>
+                </a>
+            </div>
+            <div class="nav-but-wrap">
+                <div class="menu-icon hover-target">
+                    <span class="menu-icon__line menu-icon__line-left"></span>
+                    <span class="menu-icon__line"></span>
+                    <span class="menu-icon__line menu-icon__line-right"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="nav">
+        <div class="nav__content">
+            <ul class="nav__list">
+                <li class="nav__list-item"><a href="news.html" class="hover-target">新闻</a></li>
+                <li class="nav__list-item"><a href="guide.html" class="hover-target">防疫指南</a></li>
+                <li class="nav__list-item"><a href="isolation.html" class="hover-target">隔离及就医</a></li>
+                <li class="nav__list-item active-nav"><a href="mentality.html" class="hover-target">心理帮扶</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 顶部导航栏 结束-->
+
+    <div class="container">
+        <div class="tab-summary">
+            <div class="tab-menu-items tab-menu-items-mobile">
+                <div class="tab-menu-item-menu-item-active">
+                    <p class="tab-fase">Psychological Illness </p>
+                    <p>疫情下的心理隐患</p>
+                </div>
+                <div class="tab-menu-item ">
+                    <p class="tab-fase">Children</p>
+                    <p>针对孩童</p>
+                </div>
+                <div class="tab-menu-item ">
+                    <p class="tab-fase">Serious Patients</p>
+                    <p>针对重病高风险人群</p>
+                </div>
+                <div class="tab-menu-item ">
+                    <p class="tab-fase">End of the isolation</p>
+                    <p>针对结束隔离的人群</p>
+                </div>
+                <div class="tab-menu-item ">
+                    <p class="tab-fase">Tender</p>
+                    <p>针对病患照料者</p>
+                </div>
+            </div>
+            <div class="l-container">
+                <div class="tab-image tab-tab-content">
+                    <div class="tab-tab-item w-p-active-tab-item tab-menu-item-active">
+                        <img src="images/mentality/1.jpg" alt="">
+                        <div class="tab-content-text">
+                            <h3>疫情下的心理隐患</h3>
+                            <p>新型冠状病毒肺炎 | 新冠肺炎2019（COVID-19）疫情爆发可能对人们造成压力。
+                                关于疾病的恐惧和焦虑有时会达到无法承受的地步，以致成人和儿童情绪激动 </p>
+                            <p>人们在传染病爆发期间产生的压力可能包括：</p>
+                            <ul>
+                                <li>恐惧，担心自己和所爱的人的健康</li>
+                                <li>睡眠或饮食习惯发生改变</li>
+                                <li>难以入睡或集中精神</li>
+                                <li>慢性健康问题恶化</li>
+                                <li>导致心理健康问题恶化</li>
+                                <li>增加酒精、烟草、或其他药物使用</li>
+                            </ul>
+                            <h3>每个人对压力情况的反应有所不同</h3>
+                            <p>您对疫情爆发的反应取决于您的背景、您与他人的不同之处，以及您居住的社区。</p>
+                            <p>面对危机的压力可能做出更强烈反应的人群包括：</p>
+                            <ul>
+                                <li>老年人和慢性病患者为COVID-19重病高风险人群</li>
+                                <li>儿童和青少年</li>
+                                <li>参与应对COVID-19的人，例如医生和其他医务人员，以及应急响应者</li>
+                                <li>存在精神健康问题（包括有物质滥用问题）的人</li>
+                            </ul>
+                            <h3>应对压力的方法</h3>
+                            <ul>
+                                <li><strong>避免持续收看、浏览或收听新闻</strong>（包括社交媒体）。反复接收疫情相关信息可能会让您心烦。</li>
+                                <li><strong>照顾身体</strong>
+                                    <ul class="more">
+                                        <li>深呼吸、拉伸、或冥想</li>
+                                        <li>尝试健康、营养均衡的饮食</li>
+                                        <li>规律运动保证睡眠充足</a></li>
+                                        <li>避免饮酒和使用毒品</li>
+                                    </ul>
+                                </li>
+                                <li><strong>抽时间放松</strong>。尝试做一些您喜欢的其他的事。</li>
+                                <li><strong>与他人保持联系</strong>。和您信任的人聊一聊您的忧虑和感受。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tab-tab-item ">
+                        <img src="images/mentality/2.jpg" alt="">
+                        <div class="tab-content-text">
+                            <h3>针对孩童</h3>
+                            <p>儿童和青少年从周围成年人身上看到的行为会对其产生部分影响。当父母和护理人员冷静而有信心地应对COVID-19时，可以给孩子带来最大的支持。
+                                如果父母做好了更充分的准备，就会使周围的人更加安心，尤其是孩子。</p>
+                            <h4>观察您孩子的行为变化</h4>
+                            <p><strong>每个儿童和青少年对压力的反应都不同</strong>。需要注意的一些常见行为变化，包括</p>
+                            <ul>
+                                <li>幼儿过度哭泣或恼怒</li>
+                                <li>重现小时候的一些行为（比如尿裤或尿床）</li>
+                                <li>过度担心或悲伤</li>
+                                <li>吃饭或睡觉习惯不健康</li>
+                                <li>青少年出现易怒和“发泄”行为</li>
+                                <li>学习成绩差或逃学</li>
+                                <li>难以集中注意力</li>
+                                <li>逃避过去喜爱的活动</li>
+                                <li>无法解释的头痛或身体疼痛</li>
+                                <li>饮酒、抽烟或服用其他药物</li>
+                            </ul>
+                            <h4>支持您孩子的方法</h4>
+                            <ul class="false">
+                                <li><strong>与您的儿童或青少年讨论</strong>COVID-19疫情爆发</li>
+                                <li>通过您的儿童或青少年可以理解的方式<strong>回答问题</strong>并分享关于COVID-19的事实</li>
+                                <li><strong>向您的儿童或青少年保证</strong>他们很安全。让他们知道不安是正常反应。与他们分享您如何应对自己的压力，以便他们从您身上学会如何应对。</li>
+                                <li><strong>限制您的家人接触此次事件的新闻报道</strong>，包括社交媒体。儿童可能会误解听到的内容，并对于自己无法理解的事感到恐惧。</li>
+                                <li><strong>尝试保持正常的作息习惯</strong>。如果学校已关闭，可制定一份包含学习活动以及休息或娱乐活动的时间表。</li>
+                                <li><strong>成为孩子的行为榜样</strong>。注意休息、保证充足的睡眠、锻炼身体并健康饮食。与您的朋友和家庭成员保持联系。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tab-tab-item ">
+                        <img src="images/mentality/3.jpg" alt="">
+                        <div class="tab-content-text">
+                            <h3>针对重病高风险人群</h3>
+                            <p>重病高风险人群，例如老人，而患有基础疾病的人群也可能因为COVID-19而产生压力风险。特殊考虑事项包括：</p>
+                            <ul>
+                                <li>老人和残障人士为心理健康问题高风险人群，例如抑郁。</li>
+                                <li>心理健康问题可以导致身体问题（例如头痛或胃痛）或认知问题（例如无法集中精力）。</li>
+                                <li>医生可能忽视以下人群的心理健康问题
+                                    <ul class="more">
+                                        <li>由于专注于治疗基础疾病，相对于没有残障问题的人群，残障人士更容易被忽视</li>
+                                        <li>老年人因为抑郁可能被误认为衰老的组成部分之一 </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h4>对COVID-19的正常反应</h4>
+                            <ul>
+                                <li>由于属于重病高风险人群，<strong>对保护自己免于病毒侵害的担忧</strong>。</li>
+                                <li>由于设施关闭或服务减少以及公共交通停运，<strong>对于常规医学护理或社区服务可能中断的担忧</strong>。</li>
+                                <li><strong>感到脱离社会</strong>，特别如果他们独居或住在疫情不允许访客进入的社区环境。</li>
+                                <li><strong>负罪感</strong>，如果亲人为他们提供日常活动的帮助。</li>
+                                <li><strong>压力水平增加</strong>，如果他们：
+                                    <ul class="more">
+                                        <li>疫情爆发前已经存在心理健康问题，例如抑郁。</li>
+                                        <li>住在低收入家庭或存在语言障碍</li>
+                                        <li>由于年龄、种族或民族、残障或被认为可能传播COVID-19而被污名化</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h4>支持您的亲人</h4>
+                            <p><strong>常常关心您爱的人</strong>。虚拟交流方式可以帮您和您爱的人缓解孤独感和孤立感。考虑通过以下方式与爱的人保持联系：</p>
+                            <ul>
+                                <li>电话</li>
+                                <li>电子邮件</li>
+                                <li>邮寄信件或卡片</li>
+                                <li>短信</li>
+                                <li>视频通话</li>
+                                <li>社交媒体</li>
+                            </ul>
+                            <p><strong>帮助维持您亲人的安全</strong></p>
+                            <ul>
+                                <li><strong>了解家人正在服用哪些药物。</strong>尝试帮助他们储备4周用量的处方药和非处方药，并看看是否可以帮他们准备更多。</li>
+                                <li><strong>监控其他所需医疗用品补给</strong>（氧气、失禁、透析、伤口护理）并制定备用计划。</li>
+                                <li><strong>在家里储备不易变质的食物</strong>（罐头食品、干豆、意面）以减少去商店的次数。</li>
+                                <li>如果您的亲人住在护理设施并由您照顾，监控他们的状况，并与设施管理人员或工作人员电话沟通。经常询问其他住户的健康状况并了解疫情爆发时的应对方案。</li>
+                            </ul>
+                            <p><strong>照顾好您自己的情绪健康。</strong>照顾亲人可能对您的情绪产生影响，特别是在COVID-19这样的疫情爆发期间。有一些自我帮助的措施。</p>
+                            <p><strong>如果生病了，待在家里。</strong>不要看望COVID-19重病高风险人群的家人或朋友。通过虚拟沟通方式与亲人保持联系，为他们提供支持，以维持他们的健康。
+                            </p>
+                            <h4>医疗卫生提供者可以做的事情</h4>
+                            <ul>
+                                <li><strong>帮助他们与家人和关爱的人保持联系</strong>以降低压力水平和社交孤立感。</li>
+                                <li><strong>让老年人和基础疾病患者知道，在危机期间感到压力是正常的。</strong>告诉他们寻求和接受帮助也是坚强的体现。</li>
+                                <li><strong>准备好应对程序和转诊医生</strong>以应对出现严重压力的情况或表现出自残或伤害他人倾向的人员。</li>
+                                <li>参阅SAMHSA冠状病毒（COVID-19）资源和信息</li>
+                                <h4>社区可以做的事情</h4>
+                                <p>COVID-19社区准备计划应包括老年人和残障人士，以及社区中为他们提供支持的组织，以确保他们的需求得到考虑。</p>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tab-tab-item ">
+                        <img src="images/mentality/4.jpg" alt="">
+                        <div class="tab-content-text">
+                            <h3>针对结束隔离的人群</h3>
+                            <p>如果医疗卫生提供者认为您可能接触了COVID-19病毒，即使您并没有生病，与他人隔离开来也可能产生压力。
+                                结束隔离后，每个人都会有不同的感觉。</p>
+                            <p>结束隔离后的情绪反应可能包括</p>
+                            <ul>
+                                <li>复杂情绪，包括解除隔离后的宽慰情绪</li>
+                                <li>恐惧，担心自己和所爱的人的健康</li>
+                                <li>针对COVID-19的体征和症状所做的监控和被监控所产生的压力</li>
+                                <li>因与您的接触而导致朋友或亲人对感染疾病产生无端恐惧所带来的悲伤、愤怒或沮丧，虽然您已被确定没有传染性</li>
+                                <li>由于隔离期间无法正常工作或教育孩子的愧疚感</li>
+                                <li>其他情感或心理健康状态变化</li>
+                            </ul>
+                            <p>即使是儿童，他们自己或认识的人解除隔离后，也同样可能感到难过或出现其他强烈情绪。</p>
+                        </div>
+                    </div>
+                    <div class="tab-tab-item ">
+                        <img src="images/mentality/5.jpg" alt="">
+                        <div class="tab-content-text">
+                            <h3>针对病患照料者</h3>
+                            <p>应对COVID-19可能对您的情绪产生影响，您可能会经历继发性创伤压力。
+                                继发性创伤压力为见证另一个人的创伤经历而非直接经历创伤事件后产生的应激反应和症状。</p>
+                            <p>您可以通过以下行为来减轻继发性创伤压力反应：</p>
+                            <ul>
+                                <li>承认继发性创伤压力可能对帮助过经历创伤事件家庭的任何人产生影响。</li>
+                                <li>了解身体（疲劳、疾病）和精神（恐惧、退缩、内疚）等方面的症状。</li>
+                                <li>给您和家人一些时间，以便从疫情应对中恢复过来。</li>
+                                <li>根据您喜欢的活动，制定一份个人自我护理清单，比如花一些时间陪伴朋友和家人、锻炼或看书。</li>
+                                <li>从COVID-19的媒体报道中抽时间休息一下。</li>
+                                <li>如果感到不知所措或担心COVID-19使您无法像疫情爆发之前那样照顾家人或病人，请寻求帮助。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-menu">
+                    <div class="tab-menu-items tab-menu-items-desktop">
+                        <div class="tab-menu-item tab-menu-item-active">
+                            <p class="tab-fase">Psychological illness </p>
+                            <p>疫情下的心理隐患</p>
+                        </div>
+                        <div class="tab-menu-item ">
+                            <p class="tab-fase">Children </p>
+                            <p>针对孩童</p>
+                        </div>
+                        <div class="tab-menu-item ">
+                            <p class="tab-fase">Serious Patients</p>
+                            <p>针对重病高风险人群</p>
+                        </div>
+                        <div class="tab-menu-item ">
+                            <p class="tab-fase">End of the isolation</p>
+                            <p>针对结束隔离的人群</p>
+                        </div>
+                        <div class="tab-menu-item ">
+                            <p class="tab-fase">Tender</p>
+                            <p>针对病患照料者</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-white-section-curve"></div>
+        </div>
+
+        <!-- 鼠标特效 开始 -->
+        <div class='cursor' id="cursor"></div>
+        <div class='cursor2' id="cursor2"></div>
+        <div class='cursor3' id="cursor3"></div>
+        <!-- 鼠标特效 结束 -->
+
+        <!-- 滚动条样式 开始 -->
+        <!-- <div id="progressbar"></div>
+        <div id="scrollPath"></div> -->
+        <!-- 滚动条样式 结束 -->
+    </div>
+    <script src="js/common.js"></script>
+
+
+    <script>
+
+        jQuery('.tab-menu-item').click(function () {
+            var _this = jQuery(this);
+            var _menu_index = _this.index();
+
+            jQuery(this).addClass('w-p-active-tab-item').siblings().removeClass('w-p-active-tab-item');
+            jQuery('.tab-tab-item').eq(_menu_index).addClass('w-p-active-tab-item').siblings().removeClass('w-p-active-tab-item');
+
+            jQuery('.tab-tab-item').eq(_menu_index).addClass('w-p-active-tab-item');
+            jQuery('.tab-tab-item').not(':eq(' + _menu_index + ')').removeClass('w-p-active-tab-item');
+
+            // Menu item
+            jQuery('.tab-menu-item').removeClass('tab-menu-item-active');
+            _this.addClass('tab-menu-item-active');
+
+        });
+
+        // 线上咨询界面 开始
+        var doc = document;
+        // 模拟一些后端传输数据
+        var serviceData = {
+            'robot': {
+                'name': 'robot001',
+                'dialogue': ['疫情期间如果实在找不到工作可以考虑充分利用这段时间来提升自己的技能，不要荒废这段时间。也可以在找一找有没有合适的线上实习，愿您尽快找到好的工作'],
+                'welcome': '您好，robot001为您服务'
+            }
+        };
+
+        var dialogueInput = doc.getElementById('dialogue_input'),
+            dialogueContain = doc.getElementById('dialogue_contain'),
+            dialogueHint = doc.getElementById('dialogue_hint'),
+            btnOpen = doc.getElementById('btn_open'),
+            btnClose = doc.getElementById('btn_close'),
+            timer,
+            timerId,
+            shiftKeyOn = false;  // 辅助判断shift键是否按住
+
+        btnOpen.addEventListener('click', function (e) {
+            $('.dialogue-support-btn').css({ 'display': 'none' });
+            $('.dialogue-main').css({ 'display': 'inline-block', 'height': '0' });
+            $('.dialogue-main').animate({ 'height': '600px' })
+        })
+
+        btnClose.addEventListener('click', function (e) {
+            $('.dialogue-main').animate({ 'height': '0' }, function () {
+                $('.dialogue-main').css({ 'display': 'none' });
+                $('.dialogue-support-btn').css({ 'display': 'inline-block' });
+            });
+        })
+
+        dialogueInput.addEventListener('keydown', function (e) {
+            var e = e || window.event;
+            if (e.keyCode == 16) {
+                shiftKeyOn = true;
+            }
+            if (shiftKeyOn) {
+                return true;
+            } else if (e.keyCode == 13 && dialogueInput.value == '') {
+                // console.log('发送内容不能为空');
+                // 多次触发只执行最后一次渐隐
+                setTimeout(function () {
+                    fadeIn(dialogueHint);
+                    clearTimeout(timerId)
+                    timer = setTimeout(function () {
+                        fadeOut(dialogueHint)
+                    }, 2000);
+                }, 10);
+                timerId = timer;
+                return true;
+            } else if (e.keyCode == 13) {
+                var nodeP = doc.createElement('p'),
+                    nodeSpan = doc.createElement('span');
+                nodeP.classList.add('dialogue-customer-contain');
+                nodeSpan.classList.add('dialogue-text', 'dialogue-customer-text');
+                nodeSpan.innerHTML = dialogueInput.value;
+                nodeP.appendChild(nodeSpan);
+                dialogueContain.appendChild(nodeP);
+                dialogueContain.scrollTop = dialogueContain.scrollHeight;
+                submitCustomerText(dialogueInput.value);
+            }
+        });
+
+        dialogueInput.addEventListener('keyup', function (e) {
+            var e = e || window.event;
+            if (e.keyCode == 16) {
+                shiftKeyOn = false;
+                return true;
+            }
+            if (!shiftKeyOn && e.keyCode == 13) {
+                dialogueInput.value = null;
+            }
+        });
+
+        function submitCustomerText(text) {
+            console.log(text)
+            // code here 向后端发送text内容
+
+            // 模拟后端回复
+            var num = Math.random() * 10;
+            if (num <= 7) {
+                getServiceText(serviceData);
+            }
+        }
+
+        function getServiceText(data) {
+            var serviceText = data.robot.dialogue,
+                i = Math.floor(Math.random() * serviceText.length);
+            var nodeP = doc.createElement('p'),
+                nodeSpan = doc.createElement('span');
+            nodeP.classList.add('dialogue-service-contain');
+            nodeSpan.classList.add('dialogue-text', 'dialogue-service-text');
+            nodeSpan.innerHTML = serviceText[i];
+            nodeP.appendChild(nodeSpan);
+            dialogueContain.appendChild(nodeP);
+            dialogueContain.scrollTop = dialogueContain.scrollHeight;
+        }
+
+        // 渐隐
+        function fadeOut(obj) {
+            var n = 100;
+            var time = setInterval(function () {
+                if (n > 0) {
+                    n -= 10;
+                    obj.style.opacity = '0.' + n;
+                } else if (n <= 30) {
+                    obj.style.opacity = '0';
+                    clearInterval(time);
+                }
+            }, 10);
+            return true;
+        }
+
+        // 渐显
+        function fadeIn(obj) {
+            var n = 30;
+            var time = setInterval(function () {
+                if (n < 90) {
+                    n += 10;
+                    obj.style.opacity = '0.' + n;
+                } else if (n >= 80) {
+
+                    obj.style.opacity = '1';
+                    clearInterval(time);
+                }
+            }, 100);
+            return true;
+        }
+
+        function getNowTime() {
+            var now = new Date();
+            var date = now.getFullYear() + "-" + (now.getMonth() + 1) + "-" + now.getDate(); // 年月日
+            var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds(); // 时分秒
+            var day = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六")[now.getDay()]; // 星期
+            document.getElementById("clock").innerHTML = date + " " + time + " " + day;
+        }
+        window.setInterval("getNowTime()", 3000);
+        // 线上咨询界面 结束
+
+    </script>
+</body>
+
+</html>

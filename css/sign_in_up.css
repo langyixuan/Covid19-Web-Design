@@ -1,0 +1,362 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-size: 12px;
+    max-width: 10000px;
+    background: #F5F5F5;
+    min-width: 960px;
+    width: 100%;
+    font-family: Roboto;
+    text-rendering: optimizeLegibility;   /*优化文本渲染*/
+    -webkit-font-smoothing: antialiased;  /*设置文本抗锯齿*/
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    hyphens: auto;
+    font-family: "宋体";
+    font-weight: bold;
+}
+
+.fullwidth,
+body#bp-default #wp-admin-bar .padder {
+    width: 100% !important;
+    max-width: 10000px !important;
+    min-width: 960px;
+    margin: 0 auto;
+    clear: both;
+    float: left;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 900;
+    color: #5859a1;
+    font-family: "宋体"
+}
+
+.form-group {
+    height: 55px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    margin-top: -10px;
+}
+
+.control-label {
+    font-size: 15px;
+    font-weight: 700;
+    font-family: "宋体";
+    opacity: 0.4;
+    pointer-events: none;
+    /* 防止表单重复提交 */
+    position: absolute;
+    -webkit-transform: translate3d(0, 22px, 0) scale(1);
+    -moz-transform: translate3d(0, 22px, 0) scale(1);
+    transform: translate3d(0, 22px, 0) scale(1);
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transition: 240ms;
+    -moz-transition: 240ms;
+    transition: 240ms;
+}
+
+.form-group.focused .control-label {
+    opacity: 1;
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    transform: scale(0.75);
+    color: #5859a1 !important;
+}
+
+.form-control {
+    align-self: flex-end;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: transparent;
+    -webkit-transition: 240ms;
+    -moz-transition: 240ms;
+    transition: 240ms;
+}
+
+.form-control:focus::-webkit-input-placeholder {
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+}
+
+.form-group.focused .form-control::-webkit-input-placeholder {
+    color: #bbb;
+}
+
+#textbox {
+    width: 50%;
+    max-height: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-left: 50%;
+    position: absolute;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.toplam {
+    width: 200%;
+    height: 100%;
+    position: relative;
+    left: 0;
+    left: -100%;
+}
+
+.left {
+    width: 50%;
+    height: 100%;
+    background: #2C3034;
+    left: 0;
+    position: absolute;
+}
+
+.right {
+    width: 50%;
+    height: 100%;
+    background: #F9F9F9;
+    right: 0;
+    position: absolute;
+}
+
+#ic {
+    width: 250px;
+    margin: 0 auto;
+    top: 48%;
+    margin-top: -162px;
+    position: absolute;
+    left: 45%;
+    margin-left: -125px;
+    padding: 30px 45px;
+    border: 1px solid #5859a1;
+    border-radius: 8%;
+}
+#ic:hover { 
+    transition: border linear .2s, box-shadow linear .5s; 
+    border-color:rgba(61, 22, 61, 0.5);
+    box-shadow:0 0 18px #5859a1; 
+}
+
+
+
+.left #ic {
+    margin-top: -232px;
+}
+
+#ic p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #757575;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+form#girisyap input {
+    border-bottom: 1px solid #cdcdcd;
+    color: #959595;
+    font-size: 14px;
+    width: 100%;
+    resize: none;
+    max-height: 20px;
+    outline: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 8px 0;
+    margin-top: 20px !important;
+    background: none;
+    border-top: 0;
+    overflow: hidden;
+    transition: border .2s;
+    -webkit-transition: border .2s;
+}
+
+#girisyap .form-group {
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+}
+
+#girisyap h2 {
+    font-size: 28px;
+    font-weight: 400;
+    color: #0BAFBF;
+    line-height: 35px;
+}
+
+#girisyap .soninpt {
+    margin-bottom: 30px;
+}
+
+.left form#girisyap input {
+    border-bottom: 1px solid #45494C;
+}
+
+.left .control-label {
+    color: #959595;
+}
+
+.left .yarim {
+    width: 46% !important;
+    float: left;
+    margin-right: 8%;
+}
+
+.left .sn {
+    margin-right: 0;
+}
+
+form#girisyap .girisbtn {
+    width: auto;
+    float: right;
+    background: #5859a1;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "宋体";
+    font-weight: 600;
+    color: #fff;
+    margin: 0 !important;
+    line-height: 16px;
+    text-transform: uppercase;
+    max-height: 36px;
+    height: 36px;
+    letter-spacing: 0.5px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+    -webkit-transition-property: background-color,-webkit-box-shadow;
+    transition-property: background-color,box-shadow;
+    border: 0;
+}
+
+form#girisyap .girisbtn:hover {
+    background: #5859a1;
+    -webkit-box-shadow: 0 4px 7px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 4px 7px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 7px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+}
+
+#moveleft, #moveright {
+    width: auto;
+    float: right;
+    background: none;
+    padding: 10px 16px;
+    font-family: "宋体";
+    font-size: 16px;
+    color: #5859a1;
+    font-weight: 600;
+    /* font-family: "宋体"; */
+    margin: 0 10px !important;
+    line-height: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    max-height: 36px;
+    height: 36px;
+    letter-spacing: 0.5px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+    -webkit-transition-property: background-color;
+    transition-property: background-color;
+    border: 0;
+    outline: 0;
+}
+
+#moveleft:hover {
+    background: #eee;
+}
+
+#moveright:hover {
+    background: #363A3D;
+}
+
+#fback {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -9999;
+}
+
+.girisback {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background:#5859a1 url(../images/left.gif);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.kayitback {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background:#5859a1 url(../images/right.gif);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+/* 鼠标样式 开始 */
+.cursor,
+.cursor2,
+.cursor3{
+	position: fixed;
+	border-radius: 50%;	
+	transform: translateX(-50%) translateY(-50%);
+	pointer-events: none;
+	left: -100px;
+	top: 50%;
+	mix-blend-mode: difference;
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear;
+}
+.cursor{
+	background-color: #fff;
+	height: 0;
+	width: 0;
+	z-index: 99999;
+}
+.cursor2,.cursor3{
+	height: 36px;
+	width: 36px;
+	z-index:99998;
+	-webkit-transition:all 0.3s ease-out;
+	transition:all 0.3s ease-out
+}
+.cursor2.hover,
+.cursor3.hover{
+	-webkit-transform:scale(2) translateX(-25%) translateY(-25%);
+	transform:scale(2) translateX(-25%) translateY(-25%);
+	border:none
+}
+.cursor2{
+	border: 2px solid rgb(148, 134, 143);
+	box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+.cursor2.hover{
+	background: rgb(160, 141, 141);
+	box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+}
+
+/* 鼠标样式 结束 */

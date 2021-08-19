@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>COVID-19新闻时讯</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 网站说明 -->
+    <meta name="description" content="Covid-19新型冠状网站" />
+    <!-- 网站关键字 -->
+    <meta name="keywords" content="新型冠状病毒,了解新型冠状病毒,预防新型冠状病毒,心理咨询,新型冠状病毒时讯">
+    <link rel="shortcut icon" href="images/logo.ico" />
+    <link rel="stylesheet" href="css/news.css">
+    <!-- 顶部栏样式 -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- 时间轴内容特效 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- 顶部导航栏特效 -->
+    <script
+        src="https://static.codepen.io/assets/editor/full/full_page_renderer-a8be422e43b5954dbe3f06dc7cd9f3f50f93ea87e1ff05c0680e7718ad800c6a.js"></script>
+
+</head>
+
+<body>
+    <!-- 顶部导航栏 开始 -->
+    <header class="cd-header">
+        <div class="header-wrapper">
+            <div class="logo-wrap">
+                <a href="index.html" class="hover-target">
+                    <img src="images/logo1.png" alt="">
+                    <span>COVID-19</span>
+                </a>
+            </div>
+            <div class="nav-but-wrap">
+                <div class="menu-icon hover-target">
+                    <span class="menu-icon__line menu-icon__line-left"></span>
+                    <span class="menu-icon__line"></span>
+                    <span class="menu-icon__line menu-icon__line-right"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="nav">
+        <div class="nav__content">
+            <ul class="nav__list">
+                <li class="nav__list-item active-nav"><a href="news.html" class="hover-target">新闻</a></li>
+                <li class="nav__list-item"><a href="guide.html" class="hover-target">防疫指南</a></li>
+                <li class="nav__list-item"><a href="isolation.html" class="hover-target">隔离及就医</a></li>
+                <li class="nav__list-item"><a href="mentality.html" class="hover-target">心理帮扶</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 顶部导航栏 结束-->
+
+
+
+    <div class="timeline-container" id="timeline-1">
+        <div class="timeline-header">
+            <!-- <h2 class="timeline-header__title">COVID-19重大新闻时间轴</h2>
+            <h3 class="timeline-header__subtitle">COVID-19 Timeline</h3> -->
+        </div>
+        <div class="timeline">
+            <div class="timeline-item" data-text="2019年12月">
+                <div class="timeline__content"><img class="timeline__img" src="images/news/5.jpg" />
+                    <h2 class="timeline__content-title">31日</h2>
+                    <p class="timeline__content-desc">中国报告了湖北省武汉市的一组肺炎病例，最终确认了一种新型冠状病毒。</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="2020年1月">
+                <div class="timeline__content"><img class="timeline__img" src="images/news/10.jpg" />
+                    <h2 class="timeline__content-title">1-4日</h2>
+                    <p class="timeline__content-desc">
+                        世卫组织在本组织三个层级（总部、区域总部和国家一级）组建事故管理支持小组，本组织进入抗疫紧急状态。
+                        世卫组织在社交媒体上报道，湖北省武汉市出现一组肺炎病例，无死亡病例。
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="2020年1月">
+                <div class="timeline__content"><img class="timeline__img" src="images/news/3.jpg" />
+                    <h2 class="timeline__content-title">5日</h2>
+                    <p class="timeline__content-desc">
+                        世卫组织发布本组织关于新型病毒的第一期《疾病暴发新闻》。
+                        《疾病暴发新闻》是本组织面向科学界和公共卫生界以及全球媒体的一主要技术出版物。
+                        该期包含一项风险评估和建议，并报告了中国向本组织通报的在武汉发生的聚集性肺炎病例患者状况和公共卫生对策。
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="2020年1月">
+                <div class="timeline__content"><img class="timeline__img" src="images/news/4.jpg" />
+                    <h2 class="timeline__content-title">10日</h2>
+                    <p class="timeline__content-desc">世卫组织在线发布一整套综合性技术指导，根据当时对该病毒的了解，向所有国家提供了如何发现、
+                        检测和管理潜在病例的建议。<br>
+                        当时的证据表明，“没有人传人或人传人程度有限”。根据在SARS和MERS方面的经验以及已知的呼吸道病毒传播方式，
+                        世卫组织发布了感染防控指导建议来保护卫生工作者，并建议在救治患者时采取的防飞沫和接触防护措施，
+                        建议医护人员在进行可产生气溶胶的操作时要采取的防护措施。
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="2020年1月">
+                <div class="timeline__content"><img class="timeline__img" src="images/news/1.gif" />
+                    <h2 class="timeline__content-title">12-13日</h2>
+                    <p class="timeline__content-desc">中国分享了新冠肺炎的基因序列。<br>
+                        有官员证实了泰国的新冠肺炎病例，这是中国境外第一例有记录的病例。
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="2020年1月">
+                <div class="timeline__content"><img class="timeline__img" src="images/news/6.jpg" />
+                    <h2 class="timeline__content-title">14日</h2>
+                    <p class="timeline__content-desc">玛丽亚·范·科霍夫博士在新闻发布会上指出，可能发生了有限的人与人之间传播冠状病毒现象（在41例确诊病例中），主要是通过家庭成员传播，
+                        并且称有可能暴发更大范围的疫情。玛丽亚·范·科霍夫博士指出，考虑到我们在SARS、MERS和其它呼吸道病原体方面的经验，发生人际传播不会令人惊讶。</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="2020年1月">
+                <div class="timeline__content"><img class="timeline__img" src="images/news/7.png" />
+                    <h2 class="timeline__content-title">20-22日</h2>
+                    <p class="timeline__content-desc">世卫组织驻华代表处和西太平洋区域办事处的专家对武汉进行短暂实地考察。<br>
+                        世卫组织赴中国考察组发表声明称，有证据表明武汉存在人际传播，但需要进行更多的调查以了解传播的全面情况。
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="2020年1月">
+                <div class="timeline__content"><img class="timeline__img" src="images/news/8.jpg" />
+                    <h2 class="timeline__content-title">22-23日</h2>
+                    <p class="timeline__content-desc">
+                        世卫组织总干事根据《国际卫生条例（2005）》召集突发事件委员会开会，
+                        评估疫情是否构成国际关注的突发公共卫生事件。来自世界各地的独立委员根据当时掌握的证据无法达成一致意见，
+                        他们要求10天内在收到更多信息后再次举行会议。
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="2020年1月">
+                <div class="timeline__content"><img class="timeline__img" src="images/news/9.jpg" />
+                    <h2 class="timeline__content-title">28日</h2>
+                    <p class="timeline__content-desc">由总干事率领的世卫组织高级代表团前往北京会见中国领导人，以便更多地了解中国的应对措施，并提供各种技术援助。
+                        　　谭德塞博士在京期间，与中国政府领导人商定，由一流科学家组成国际团队赴中国深入了解具体情况和总体应对措施，并交流信息和经验。</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="2020年1月">
+                <div class="timeline__content"><img class="timeline__img" src="images/news/2.jpg" />
+                    <h2 class="timeline__content-title">30日</h2>
+                    <p class="timeline__content-desc">世卫组织总干事重新召集了突发事件委员会，早于此前决定的10天期限，距中国以外首次报告有限的人与人之间传播只有两天。
+                        这次委员会达成共识，并告知总干事该疫情构成“国际关注的突发公共卫生事件（PHEIC）”。总干事接受了该建议，并宣布新冠疫情为“国际关注的突发公共卫生事件”。
+                        自《国际卫生条例》于2005年生效以来，这是世卫组织第六次宣布PHEIC。</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="2020年2月">
+                <div class="timeline__content"><img class="timeline__img" src="images/news/11.jpg" />
+                    <h2 class="timeline__content-title">11-12日</h2>
+                    <p class="timeline__content-desc">
+                        世卫组织召集关于新冠肺炎的研究与创新论坛，来自世界各地的400多名专家和资助方代表出席会议，
+                        中国疾控中心主任高福和中国疾控中心流行病学首席专家吴尊友作了介绍性发言。
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="2020年2月">
+                <div class="timeline__content"><img class="timeline__img" src="images/news/12.png" />
+                    <h2 class="timeline__content-title">16-24日</h2>
+                    <p class="timeline__content-desc">
+                        世卫组织—中国联合考察团成员包括来自加拿大、德国、日本、尼日利亚、韩国、俄罗斯、新加坡和美国（疾控中心、国立卫生研究院）的专家。联合考察团在北京停留一段时间，还曾赴武汉和其它两个城市。
+                        他们在保持人际距离的情况下，与卫生官员、科学家和医务人员作了交谈。</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="2020年3月">
+                <div class="timeline__content"><img class="timeline__img" src="images/news/13.jpg" />
+                    <h2 class="timeline__content-title">11-13日</h2>
+                    <p class="timeline__content-desc">世卫组织评估后认为可将新冠肺炎视为大流行。<br>
+                        成立了“新冠肺炎团结应对基金”，以接收个人，公司和机构的捐款。</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="2020年3月">
+                <div class="timeline__content"><img class="timeline__img" src="images/news/14.gif" />
+                    <h2 class="timeline__content-title">18日</h2>
+                    <p class="timeline__content-desc">世卫组织及其合作伙伴发起了“团结试验”，这是一项国际临床试验，旨在通过在世界各地产出可靠数据，
+                        以找到最有效的新冠肺炎治疗方法。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 鼠标特效 开始 -->
+    <div class='cursor' id="cursor"></div>
+    <div class='cursor2' id="cursor2"></div>
+    <div class='cursor3' id="cursor3"></div>
+    <!-- 鼠标特效 结束 -->
+
+    <!-- 滚动条样式 开始 -->
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
+    <!-- 滚动条样式 结束 -->
+
+</body>
+<script src="js/common.js"></script>
+<script>
+    // 时间轴内容特效 开始
+    (function ($) {
+        $.fn.timeline = function () {
+            var selectors = {
+                id: $(this),
+                item: $(this).find(".timeline-item"),
+                activeClass: "timeline-item--active",
+                img: ".timeline__img"
+            };
+            selectors.item.eq(0).addClass(selectors.activeClass);
+            selectors.id.css(
+                "background-image",
+                "url(" +
+                selectors.item
+                    .first()
+                    .find(selectors.img)
+                    .attr("src") +
+                ")"
+            );
+            var itemLength = selectors.item.length;
+            $(window).scroll(function () {
+                var max, min;
+                var pos = $(this).scrollTop();
+                selectors.item.each(function (i) {
+                    min = $(this).offset().top;
+                    max = $(this).height() + $(this).offset().top;
+                    var that = $(this);
+                    if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+                        selectors.item.removeClass(selectors.activeClass);
+                        selectors.id.css(
+                            "background-image",
+                            "url(" +
+                            selectors.item
+                                .last()
+                                .find(selectors.img) +
+                            ")"
+                        );
+                        selectors.item.last().addClass(selectors.activeClass);
+                    } else if (pos <= max - 40 && pos >= min) {
+                        selectors.id.css(
+                            "background-image",
+                            "url(" +
+                            $(this)
+                                .find(selectors.img) +
+                            ")"
+                        );
+                        selectors.item.removeClass(selectors.activeClass);
+                        $(this).addClass(selectors.activeClass);
+                    }
+                });
+            });
+        };
+    })(jQuery);
+    $("#timeline-1").timeline();
+    // 时间轴内容特效  结束
+
+</script>
+
+</html>
